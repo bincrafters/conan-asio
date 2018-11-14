@@ -58,6 +58,7 @@ class AsioConan(ConanFile):
     def package_info(self):
         if self.options.standalone:
             self.cpp_info.defines.append('ASIO_STANDALONE')
+
         if self.settings.os == 'Linux':
             self.cpp_info.libs.append('pthread')
 
