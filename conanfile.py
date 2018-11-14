@@ -7,7 +7,7 @@ from conans.errors import ConanInvalidConfiguration
 
 class AsioConan(ConanFile):
     name = "asio"
-    version = "1.12.0"
+    version = "1.11.0"
     url = "https://github.com/bincrafters/conan-asio"
     homepage = "https://github.com/chriskohlhoff/asio"
     author = "Bincrafters <bincrafters@gmail.com>"
