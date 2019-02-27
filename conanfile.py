@@ -5,9 +5,10 @@ import os
 from conans import ConanFile, tools
 from conans.errors import ConanInvalidConfiguration
 
+
 class AsioConan(ConanFile):
     name = "asio"
-    version = "1.12.0"
+    version = "1.12.2"
     url = "https://github.com/bincrafters/conan-asio"
     homepage = "https://github.com/chriskohlhoff/asio"
     author = "Bincrafters <bincrafters@gmail.com>"
@@ -45,7 +46,7 @@ class AsioConan(ConanFile):
     def source(self):
         archive_name = "asio-" + self.version.replace(".", "-")
         tools.get("{0}/archive/{1}.tar.gz".format(self.homepage,  archive_name))
-        extracted_name =  "asio-" + archive_name
+        extracted_name = "asio-" + archive_name
         os.rename(extracted_name, self._source_subfolder)
 
     def package(self):
