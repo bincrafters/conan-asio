@@ -8,7 +8,7 @@ from conans.errors import ConanInvalidConfiguration
 
 class AsioConan(ConanFile):
     name = "asio"
-    version = "1.12.2"
+    version = "1.13.0"
     url = "https://github.com/bincrafters/conan-asio"
     homepage = "https://github.com/chriskohlhoff/asio"
     author = "Bincrafters <bincrafters@gmail.com>"
@@ -38,10 +38,10 @@ class AsioConan(ConanFile):
 
     def requirements(self):
         if self.options.with_boost_regex:
-            self.requires.add("boost/1.68.0@conan/stable")
+            self.requires.add("boost/1.69.0@conan/stable")
 
         if self.options.with_openssl:
-            self.requires.add("OpenSSL/1.0.2p@conan/stable")
+            self.requires.add("OpenSSL/1.0.2x_latest@conan/stable")
 
     def source(self):
         archive_name = "asio-" + self.version.replace(".", "-")
