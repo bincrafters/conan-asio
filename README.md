@@ -2,7 +2,7 @@
 
 | Bintray | Appveyor | Travis | 
 |---------|-----------|--------|
-|[![Download](https://api.bintray.com/packages/bincrafters/public-conan/asio%3Abincrafters/images/download.svg)](https://bintray.com/bincrafters/public-conan/asio%3Abincrafters/_latestVersion)|[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-asio?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-asio)|[![Build Status](https://travis-ci.org/bincrafters/conan-asio.svg)](https://travis-ci.org/bincrafters/conan-asio)|
+|[![Download](https://api.bintray.com/packages/bincrafters/public-conan/asio%3Abincrafters/images/download.svg)](https://bintray.com/bincrafters/public-conan/asio%3Abincrafters/_latestVersion)|[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-asio?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-asio)|[![Build Status](https://travis-ci.com/bincrafters/conan-asio.svg)](https://travis-ci.com/bincrafters/conan-asio)|
 
 ## Conan.io Information
 
