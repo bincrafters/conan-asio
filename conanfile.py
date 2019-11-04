@@ -5,14 +5,12 @@ from conans.errors import ConanInvalidConfiguration
 
 class AsioConan(ConanFile):
     name = "asio"
-    version = "1.13.0"
+    description = "Asio is a cross-platform C++ library for network and low-level I/O"
+    topics = ("conan", "asio", "network", "io", "low-level")
     url = "https://github.com/bincrafters/conan-asio"
     homepage = "https://github.com/chriskohlhoff/asio"
-    author = "Bincrafters <bincrafters@gmail.com>"
-    description = "Asio is a cross-platform C++ library for network and low-level I/O"
     license = "BSL-1.0"
-    topics = ("conan", "asio", "network", "io", "low-level")
-    exports = ["LICENSE.md"]
+
     options = {
         "standalone": [True, False],
         "with_boost_regex": [True, False],
@@ -24,6 +22,7 @@ class AsioConan(ConanFile):
         "with_openssl": False
     }
     settings = "os"
+
     _source_subfolder = "source_subfolder"
 
     def configure(self):
@@ -35,16 +34,15 @@ class AsioConan(ConanFile):
 
     def requirements(self):
         if self.options.with_boost_regex:
-            self.requires.add("boost/1.69.0@conan/stable")
+            self.requires.add("boost/1.70.0")
 
         if self.options.with_openssl:
-            self.requires.add("OpenSSL/1.0.2x_latest@conan/stable")
+            self.requires.add("openssl/1.0.2t")
 
     def source(self):
-        archive_name = "asio-" + self.version.replace(".", "-")
-        tools.get("{0}/archive/{1}.tar.gz".format(self.homepage,  archive_name))
-        extracted_name = "asio-" + archive_name
-        os.rename(extracted_name, self._source_subfolder)
+        tools.get(**self.conan_data["sources"][self.version])
+        extracted_dir = self.name + "-asio-" + self.version.replace(".", "-")
+        os.rename(extracted_dir, self._source_subfolder)
 
     def package(self):
         root_dir = os.path.join(self._source_subfolder, self.name)

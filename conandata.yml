@@ -1,0 +1,4 @@
+sources:
+  "1.14.0":
+    url: "https://github.com/chriskohlhoff/asio/archive/asio-1-14-0.tar.gz"
+    sha256: "bdb01a649c24d73ca4a836662e7af442d935313ed6deef6b07f17f3bc5f78d7a"
